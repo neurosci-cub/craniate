@@ -1,0 +1,662 @@
+
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 1rem 0;
+        }
+        .navigation {
+          padding: 1rem 0;
+          background-color: white;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          position: sticky;
+          top: 0;
+          z-index: 100;
+      }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        
+        .logo p {
+            margin: 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/brain\ illusion.webp');
+            height: 400px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .hero-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-button {
+            display: inline-block;
+            background-color: #ff4081;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .hero-button:hover {
+            background-color: #e91e63;
+        }
+        
+        /* Introduction Section */
+        .intro {
+            padding: 3rem 0;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Illusion Cards Section */
+        .cards-section {
+            padding: 4rem 0;
+            background-color: #f5f5f5;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #6200ea;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 20px rgba(0,0,0,0.15);
+        }
+        
+        .card-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            color: #6200ea;
+            font-size: 1.5rem;
+        }
+        
+        .card-description {
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        
+        .card-tag {
+            display: inline-block;
+            background-color: #e8eaf6;
+            color: #5c6bc0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-button {
+            display: inline-block;
+            background-color: #ff4081;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-top: auto;
+        }
+        
+        .card-button:hover {
+            background-color: #e91e63;
+        }
+        
+        /* Multimedia Section */
+        .multimedia {
+            background-color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .video-item {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+        
+        .video-placeholder {
+            background-color: #ddd;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        /* Quiz Section */
+        .quiz {
+            background-color: #e8f5e9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+        
+        .quiz h3 {
+            color: #2e7d32;
+            text-align: center;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .quiz-option {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #c8e6c9;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .quiz-option:hover {
+            background-color: #c8e6c9;
+        }
+        
+        /* Resources Section */
+        .resources {
+            padding: 4rem 0;
+            background-color: #f5f5f5;
+        }
+        
+        .resources-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .resource-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .resource-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .resource-item h4 {
+            margin-top: 0;
+            color: #6200ea;
+        }
+        
+        .resource-item a {
+            color: #ff4081;
+            text-decoration: none;
+        }
+        
+        .resource-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer-bottom {
+            margin-top: 2rem;
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        .quiz {
+            background-color: #e8f5e9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden; /* Important for containing the confetti */
+        }
+        
+        .quiz h3 {
+            color: #2e7d32;
+            text-align: center;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .quiz-option {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #c8e6c9;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .quiz-option:hover {
+            background-color: #c8e6c9;
+        }
+        
+        .quiz-option.selected {
+            background-color: #81c784;
+            border-color: #4caf50;
+            color: white;
+        }
+        
+        .vote-count {
+            background-color: #4caf50;
+            color: white;
+            border-radius: 20px;
+            padding: 2px 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        /* Confetti Styles */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+            transform: translateY(-100px);
+            pointer-events: none;
+            z-index: 100;
+        }
+        
+        @keyframes fall {
+            0% {
+                opacity: 1;
+                top: -100px;
+                transform: translateX(0) rotate(0deg);
+            }
+            100% {
+                opacity: 0.3;
+                top: 600px;
+                transform: translateX(100px) rotate(360deg);
+            }
+        }
+        .stats-container {
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .stats-container h4 {
+            margin-top: 0;
+            color: #2e7d32;
+            text-align: center;
+        }
+        
+        .stats-bar {
+            display: flex;
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .stats-bar-segment {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            transition: width 0.5s ease;
+        }
+       
+      
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #6200ea;
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #5000c8;
+        }
+        
+        .page-title {
+            margin: 2rem 0;
+            text-align: center;
+            color: #6200ea;
+        }
+        
+        /* Main Illusion Section */
+        .main-illusion {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .main-illusion h2 {
+            color: #6200ea;
+            margin-top: 0;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1rem;
+        }
+        
+        .illusion-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .illusion-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .illusion-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .illusion-details {
+            flex: 1.5;
+            min-width: 300px;
+        }
+        
+        .materials-box {
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .materials-box h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .instructions-box {
+            background-color: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .instructions-box h3 {
+            margin-top: 0;
+            color: #0d47a1;
+        }
+        
+        .science-box {
+            background-color: #fff3e0;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .science-box h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+        
+        /* Other Illusions Section */
+        .other-illusions {
+            margin-bottom: 3rem;
+        }
+        
+        .other-illusions h2 {
+            text-align: center;
+            color: #6200ea;
+            margin-bottom: 1.5rem;
+        }
+        
+        .illusions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .illusion-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .illusion-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-image {
+            height: 180px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-content h3 {
+            margin-top: 0;
+            color: #6200ea;
+        }
+        
+        .try-button {
+            display: inline-block;
+            background-color: #ff4081;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .try-button:hover {
+            background-color: #e91e63;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ddd;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-text {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .illusion-content {
+                flex-direction: column;
+            }
+            
+            .illusion-image {
+                margin-bottom: 1rem;
+            }
+        }
+    
